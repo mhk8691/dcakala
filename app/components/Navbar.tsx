@@ -76,6 +76,8 @@ export default function Navbar() {
           variant="contained"
           size="medium"
           sx={loginBtnStyle}
+          component={Link}
+          href={"/login"}
           endIcon={<AccountCircleIcon fontSize="large" color="secondary" />}
         >
           <Typography variant="body2" sx={{ opacity: ".8", fontSize: "14px" }}>

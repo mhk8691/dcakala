@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar from "./components/Navbar";
 import Theme from "./core/Theme";
 import { Vazirmatn } from "next/font/google";
+import ClientNavbar from "./components/ClientNavbar";
 
 const vazirmatn = Vazirmatn({ subsets: ["latin"], weight: "400" });
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={vazirmatn.className}>
         <Theme>
-          <Navbar />
+          <ClientNavbar />
           <main>{children}</main>
         </Theme>
       </body>
