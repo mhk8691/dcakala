@@ -14,7 +14,17 @@ const theme = createTheme({
       main: "#009688",
     },
   },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 641,
+      md: 900,
+      lg: 1200, 
+      xl: 1536,
+    },
+  },
 });
+
 export default function Theme({ children }: { children: React.ReactNode }) {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }

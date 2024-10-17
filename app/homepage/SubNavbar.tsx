@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 export default function SubNavbar() {
   return (
@@ -6,13 +6,14 @@ export default function SubNavbar() {
       bgcolor={"#F3F3F3"}
       flexDirection={"row"}
       alignItems={"center"}
-      borderBottom={2}
+      borderBottom={3}
       py={1.5}
       gap={4}
       mt={0.5}
       justifyContent={"center"}
       borderColor={"#EAEAEA"}
       sx={{ borderBottomRightRadius: "50%", borderBottomLeftRadius: "50%" }}
+      
     >
       <Stack flexDirection={"row"} alignItems={"center"}>
         <Typography

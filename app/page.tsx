@@ -1,3 +1,4 @@
+import Category from "./homepage/Category";
 import ImageSlider from "./homepage/ImageSlider";
 import SubNavbar from "./homepage/SubNavbar";
 import { metadata } from "./layout";
@@ -6,8 +7,9 @@ metadata.title =
 export default function Home() {
   return (
     <div>
-      <SubNavbar/>
+      <SubNavbar />
       <ImageSlider />
+      <Category />
     </div>
   );
 }
