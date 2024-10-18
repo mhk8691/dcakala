@@ -1,6 +1,16 @@
 "use client";
 import { createTheme, ThemeProvider } from "@mui/material";
-const theme = createTheme({
+declare module "@mui/material/styles" {
+  interface BreakpointOverrides {
+    xxs: true;
+    xs: true;
+    sm: true;
+    md: true;
+    lg: true;
+    xl: true;
+  }
+}
+const defaultTheme = createTheme({
   typography: {
     fontFamily: "Vazirmatn",
   },
@@ -16,15 +26,22 @@ const theme = createTheme({
   },
   breakpoints: {
     values: {
-      xs: 0,
+      xxs: 0,
+      xs: 541,
       sm: 641,
       md: 900,
-      lg: 1200, 
+      lg: 1200,
       xl: 1536,
     },
   },
 });
 
-export default function Theme({ children }: { children: React.ReactNode }) {
+export default function Theme({
+  children,
+  theme = defaultTheme,
+}: {
+  children: React.ReactNode;
+  theme?: any;
+}) {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 }

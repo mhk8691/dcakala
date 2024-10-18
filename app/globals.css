@@ -33,3 +33,6 @@ input[type="number"]::-webkit-inner-spin-button {
 .swiper-slide{
   user-select: none !important;
 }
+.swiper-button-disabled{
+  display: none !important;
+}

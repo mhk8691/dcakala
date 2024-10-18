@@ -48,6 +48,8 @@ const data: Data[] = [
   },
 ];
 export default function ImageSlider() {
+  
+
   return (
     <Box height={"50vh"} width={"100%"} mt={1}>
       <Swiper

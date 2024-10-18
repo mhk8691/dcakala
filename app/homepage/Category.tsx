@@ -55,11 +55,12 @@ const data: Data[] = [
 ];
 
 export default function Category() {
+  
   return (
     <Theme>
-      <Grid container spacing={2} sx={{ mt: "2rem",mb:2, direction: "rtl" }}>
+      <Grid container spacing={2} sx={{ mt: "2rem", mb: 2, direction: "rtl" }}>
         {data.map((item, index) => (
-          <Grid size={{ sm: 2, xs: 4 }} key={index}>
+          <Grid size={{ sm: 2, xxs: 4 }} key={index}>
             <Stack
               component={Link}
               href={item.link}
