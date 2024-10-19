@@ -2,13 +2,12 @@
 import {
   Box,
   Button,
-  Container,
   Stack,
   SxProps,
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
+import React, { use, useEffect, useRef, useState } from "react";
 import { Data } from "../services/videoPhone";
 import { Swiper, SwiperSlide } from "swiper/react";
 import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
@@ -18,7 +17,13 @@ import "swiper/css/navigation";
 import styles from "./ProductSlider.module.css";
 import { Pagination, Navigation } from "swiper/modules";
 import { useTheme } from "@mui/material/styles";
+import useBreakPoint from "../hook/useBreakPoint";
 
+const colorBoxStyle: SxProps = {
+  width: "18px",
+  height: "18px",
+  border: "1px solid #E5E7EB",
+};
 const titleStyle: SxProps = {
   display: "flex",
   alignItems: "center",
@@ -40,12 +45,6 @@ const viewAllBtnStyle: SxProps = {
     backgroundColor: "#F6FAFD",
   },
 };
-
-const colorBoxStyle: SxProps = {
-  width: "18px",
-  height: "18px",
-  border: "1px solid #E5E7EB",
-};
 interface Props {
   data: Data[];
   title: string;
@@ -53,16 +52,18 @@ interface Props {
 export default function ProductSlider({ data, title }: Props) {
   const [responsive, setResponsive] = useState<number | null>(null);
   const [hasBtn, setHasBtn] = useState<boolean>(true);
-  const theme = useTheme();
-  const isExtraSmall = useMediaQuery(theme.breakpoints.between("xxs", "xs"));
-  const isMobileSmall = useMediaQuery(theme.breakpoints.between("xs", "sm"));
-  const isMobileLarge = useMediaQuery(theme.breakpoints.between("sm", "md"));
-  const isTabletSmall = useMediaQuery(theme.breakpoints.between("md", "lg"));
-  const isTabletLarge = useMediaQuery(theme.breakpoints.between("lg", "xl"));
-  const isDesktopSmall = useMediaQuery(theme.breakpoints.between("xl", "xxl"));
-  const isDesktopLarge = useMediaQuery(theme.breakpoints.up("xxl"));
+  const {
+    isExtraSmall,
+    isMobileSmall,
+    isMobileLarge,
+    isTabletSmall,
+    isTabletLarge,
+    isDesktopSmall,
+    isDesktopLarge,
+  } = useBreakPoint();
   useEffect(() => {
     if (isExtraSmall) {
+      setResponsive(1.5);
       setHasBtn(false);
     } else if (isMobileSmall) {
       setResponsive(1.5);
@@ -93,7 +94,7 @@ export default function ProductSlider({ data, title }: Props) {
   ]);
 
   return (
-    <Container maxWidth={"xxxl"} sx={{ mt: 5, direction: "rtl" }}>
+    <>
       <Typography variant="h6" color="initial" sx={titleStyle}>
         {title}
       </Typography>
@@ -102,7 +103,6 @@ export default function ProductSlider({ data, title }: Props) {
           مشاهده همه
         </Button>
       </Box>
-
       <Swiper
         slidesPerView={responsive ? responsive : 3}
         spaceBetween={30}
@@ -135,13 +135,11 @@ export default function ProductSlider({ data, title }: Props) {
                   height: "100%",
                 }}
               />
-              {item.color && (
-                <Box display={"flex"} gap={1} sx={{ minHeight: "20px" }}>
-                  {item.color.map((item, index) => (
-                    <Box key={index} sx={colorBoxStyle} bgcolor={item}></Box>
-                  ))}
-                </Box>
-              )}
+              <Box display={"flex"} gap={1} sx={{ minHeight: "20px" }}>
+                {item.color?.map((item, index) => (
+                  <Box key={index} sx={colorBoxStyle} bgcolor={item}></Box>
+                ))}
+              </Box>
               {item.fastShipping && (
                 <Box
                   bgcolor={"secondary.main"}
@@ -167,7 +165,7 @@ export default function ProductSlider({ data, title }: Props) {
                   opacity: ".8",
                   textAlign: "right",
                   mt: item.fastShipping ? 3 : 7.2,
-                  minHeight: "30px",
+                  minHeight: "40px",
                 }}
               >
                 {item.title}
@@ -239,6 +237,6 @@ export default function ProductSlider({ data, title }: Props) {
           </SwiperSlide>
         ))}
       </Swiper>
-    </Container>
+    </>
   );
 }
