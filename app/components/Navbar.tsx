@@ -13,6 +13,9 @@ const navbarStyle: SxProps = {
   alignItems: "center",
   py: 1.7,
   px: 2,
+  position: "sticky", 
+  top: 0,
+  zIndex: 1000, // اضافه کردن z-index
 };
 const cartBtnStyle: SxProps = {
   bgcolor: "#ffffff",
@@ -67,7 +70,7 @@ function SearchBar() {
 
 export default function Navbar() {
   return (
-    <Box sx={navbarStyle}>
+    <Box sx={navbarStyle} component={'nav'}>
       <Stack flexDirection={"row"} alignItems={"center"}>
         <Button variant="contained" size="small" sx={cartBtnStyle}>
           <ShoppingCartOutlinedIcon color="secondary" />

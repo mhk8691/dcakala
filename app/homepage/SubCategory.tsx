@@ -20,7 +20,7 @@ export default function SubCategory() {
   const isExtraSmallScreen = useMediaQuery(theme.breakpoints.down("xs"));
   return (
     <Theme>
-      <Container maxWidth={"xl"} sx={{ mt: 5 }}>
+      <Container maxWidth={"xxxl"} sx={{ mt: 5 }}>
         <Grid container rowSpacing={[0.1, 0.1, 1]} columnSpacing={[1, 1, 2]}>
           <Grid size={6}>
             <Box component={Link} href={"/automatic-gate/kone-gates"}>

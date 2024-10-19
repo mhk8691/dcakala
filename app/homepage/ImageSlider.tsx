@@ -48,8 +48,6 @@ const data: Data[] = [
   },
 ];
 export default function ImageSlider() {
-  
-
   return (
     <Box height={"50vh"} width={"100%"} mt={1}>
       <Swiper
@@ -60,11 +58,14 @@ export default function ImageSlider() {
           clickable: true,
         }}
         modules={[Navigation, Pagination, History]}
-        className={styles.swiper}
+        style={{
+          width: "100%",
+          height: "97%",
+        }}
       >
         {data.map((item) => (
           <SwiperSlide className={styles.swiperSlide} key={item.id}>
-            <Link href={item.link} style={{ height:'100%'}}>
+            <Link href={item.link} style={{ height: "100%" }}>
               <img src={item.imagePath} alt="" />
             </Link>
           </SwiperSlide>

@@ -8,6 +8,8 @@ declare module "@mui/material/styles" {
     md: true;
     lg: true;
     xl: true;
+    xxl: true;
+    xxxl: true;
   }
 }
 const defaultTheme = createTheme({
@@ -29,9 +31,11 @@ const defaultTheme = createTheme({
       xxs: 0,
       xs: 541,
       sm: 641,
-      md: 900,
-      lg: 1200,
-      xl: 1536,
+      md: 768,
+      lg: 990,
+      xl: 1024,
+      xxl: 1200,
+      xxxl:1550
     },
   },
 });
