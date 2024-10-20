@@ -7,9 +7,11 @@ import SubNavbar from "./homepage/SubNavbar";
 import { metadata } from "./layout";
 import { data as dataBrand } from "./services/videoBrand";
 import { data as dataVideoIphon } from "./services/videoPhone";
-import {data as dataParkingDoorJack} from "./services/ParkingDoorJack";
-import {data as jackBrand} from "./services/jackBrand";
+import { data as dataParkingDoorJack } from "./services/ParkingDoorJack";
+import { data as jackBrand } from "./services/jackBrand";
 import BrandSlider from "./components/BrandSlider";
+import CCTVCamera from "./homepage/CCTVCamera";
+import SelectedCategories from "./homepage/SelectedCategories";
 metadata.title =
   "فروشگاه دی سی ای کالا - آیفون تصویری، دوربین مدار بسته، جک پارکینگی";
 export default function Home() {
@@ -22,6 +24,10 @@ export default function Home() {
       <Container maxWidth={"xxxl"} sx={{ mt: 5, direction: "rtl" }}>
         <ProductSlider data={dataVideoIphon} title="آیفون های تصویری" />
         <BrandSlider data={dataBrand} />
+      </Container>
+      <CCTVCamera />
+      <Container maxWidth={"xxxl"} sx={{ mt: 5, direction: "rtl" }}>
+        <SelectedCategories />
         <ProductSlider data={dataParkingDoorJack} title="جک درب پارکینگ" />
         <BrandSlider data={jackBrand} />
       </Container>

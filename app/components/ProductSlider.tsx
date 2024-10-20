@@ -5,7 +5,6 @@ import {
   Stack,
   SxProps,
   Typography,
-  useMediaQuery,
 } from "@mui/material";
 import React, { use, useEffect, useRef, useState } from "react";
 import { Data } from "../services/videoPhone";
@@ -16,29 +15,15 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import styles from "./ProductSlider.module.css";
 import { Pagination, Navigation } from "swiper/modules";
-import { useTheme } from "@mui/material/styles";
 import useBreakPoint from "../hook/useBreakPoint";
+import Title from "./Title";
 
 const colorBoxStyle: SxProps = {
   width: "18px",
   height: "18px",
   border: "1px solid #E5E7EB",
 };
-const titleStyle: SxProps = {
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  gap: "0.5rem",
-  fontSize: "14px",
-  mt: 2,
 
-  "&:before, &:after": {
-    content: '""',
-    flexGrow: 1,
-    height: "1px",
-    backgroundColor: "#000000",
-  },
-};
 const viewAllBtnStyle: SxProps = {
   mt: 2,
   "&:hover": {
@@ -95,9 +80,7 @@ export default function ProductSlider({ data, title }: Props) {
 
   return (
     <>
-      <Typography variant="h6" color="initial" sx={titleStyle}>
-        {title}
-      </Typography>
+      <Title title={title} />
       <Box display={"flex"} justifyContent={"flex-end"} gap={1}>
         <Button variant="text" color="primary" sx={viewAllBtnStyle}>
           مشاهده همه

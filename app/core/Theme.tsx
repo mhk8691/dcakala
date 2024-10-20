@@ -31,11 +31,11 @@ const defaultTheme = createTheme({
       xxs: 0,
       xs: 541,
       sm: 641,
-      md: 768,
+      md: 769,
       lg: 990,
       xl: 1024,
       xxl: 1200,
-      xxxl:1550
+      xxxl: 1550,
     },
   },
 });
