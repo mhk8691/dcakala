@@ -26,8 +26,8 @@ export default function BestSellers() {
       setResponsive(2.5);
       setHasBtn(false);
     } else if (isMobileSmall) {
-        setResponsive(2.5);
-        setHasBtn(true);
+      setResponsive(2.5);
+      setHasBtn(true);
     } else if (isMobileLarge) {
       setResponsive(4.5);
       setHasBtn(true);
@@ -54,7 +54,7 @@ export default function BestSellers() {
     isDesktopLarge,
   ]);
   return (
-    <Box sx={{ bgcolor: "primary.light", py: 2 ,mt:7}}>
+    <Box sx={{ bgcolor: "primary.light", py: 2, mt: 7 }}>
       <Box px={5}>
         <Title title="پر فروش ترین ها" />
       </Box>

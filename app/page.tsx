@@ -13,6 +13,8 @@ import BrandSlider from "./components/BrandSlider";
 import CCTVCamera from "./homepage/CCTVCamera";
 import SelectedCategories from "./homepage/SelectedCategories";
 import BestSellers from "./homepage/BestSellers";
+import RollingShutters from "./homepage/RollingShutters";
+import AboutUs from "./homepage/AboutUs";
 metadata.title =
   "فروشگاه دی سی ای کالا - آیفون تصویری، دوربین مدار بسته، جک پارکینگی";
 export default function Home() {
@@ -32,7 +34,9 @@ export default function Home() {
         <ProductSlider data={dataParkingDoorJack} title="جک درب پارکینگ" />
         <BrandSlider data={jackBrand} />
         <BestSellers />
+        <RollingShutters />
       </Container>
+      <AboutUs/>
     </div>
   );
 }
