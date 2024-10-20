@@ -52,6 +52,7 @@ export default function ProductSlider({ data, title }: Props) {
       setHasBtn(false);
     } else if (isMobileSmall) {
       setResponsive(1.5);
+      setHasBtn(true);
     } else if (isMobileLarge) {
       setResponsive(2.2);
       setHasBtn(true);
