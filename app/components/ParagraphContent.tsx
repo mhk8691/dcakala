@@ -1,5 +1,4 @@
 import { Box, SxProps, Typography } from "@mui/material";
-import SyntaxHighlighter from "react-syntax-highlighter";
 interface ParagraphProps {
   children: React.ReactNode;
   style?: SxProps;
@@ -7,16 +6,27 @@ interface ParagraphProps {
 const defaultStyle: SxProps = {
   fontSize: "18px",
   direction: "rtl",
-  px: 3,
+  px: {
+    xxs: 1,
+    sm: 3,
+  },
   whiteSpace: "pre-wrap",
+  mt: 1,
+  lineHeight: {
+    xxs: "35px",
+    sm: '29px',
+  },
+  fontWeight: "500",
+  
 };
 export default function ParagraphContent({ children, style }: ParagraphProps) {
+  const finalStyle = { ...defaultStyle, ...style };
   return (
     <Typography
       component={"pre"}
       variant="body1"
       color="initial"
-      sx={style || defaultStyle}
+      sx={finalStyle}
     >
       {children}
     </Typography>

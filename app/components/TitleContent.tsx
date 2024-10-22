@@ -7,11 +7,12 @@ const defaultStyle: SxProps = {
   color: "#52AFC2",
   fontSize: "28px",
   textAlign: "center",
-  mt: 2,
+  mt: 5,
 };
 export default function TitleContent({ children, style }: TitleContentProps) {
+  const finalStyle = {...defaultStyle,...style}
   return (
-    <Typography variant="h6" sx={style || defaultStyle}>
+    <Typography variant="h6" sx={finalStyle}>
       {children}
     </Typography>
   );

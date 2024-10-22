@@ -15,7 +15,7 @@ const navbarStyle: SxProps = {
   px: 2,
   position: "sticky", 
   top: 0,
-  zIndex: 1000, // اضافه کردن z-index
+  zIndex: 1000, 
 };
 const cartBtnStyle: SxProps = {
   bgcolor: "#ffffff",

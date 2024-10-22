@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import Navbar from "./Navbar";
+import SubNavbar from "./SubNavbar";
 
 export default function ClientNavbar() {
   const pathName = usePathname();
@@ -9,5 +10,10 @@ export default function ClientNavbar() {
   if (noNavbarPages.includes(pathName)) {
     return null;
   }
-  return <Navbar />;
+  return (
+    <>
+      <Navbar />
+      <SubNavbar/>
+    </>
+  );
 }

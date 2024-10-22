@@ -3,7 +3,6 @@ import ProductSlider from "./components/ProductSlider";
 import Category from "./homepage/Category";
 import ImageSlider from "./homepage/ImageSlider";
 import SubCategory from "./homepage/SubCategory";
-import SubNavbar from "./homepage/SubNavbar";
 import { metadata } from "./layout";
 import { data as dataBrand } from "./services/videoBrand";
 import { data as dataVideoIphon } from "./services/videoPhone";
@@ -20,7 +19,6 @@ metadata.title =
 export default function Home() {
   return (
     <div>
-      <SubNavbar />
       <ImageSlider />
       <Category />
       <SubCategory />
