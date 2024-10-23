@@ -6,7 +6,7 @@ import SubNavbar from "./SubNavbar";
 
 export default function ClientNavbar() {
   const pathName = usePathname();
-  const noNavbarPages = ["/login"];
+  const noNavbarPages = ["/login",'/cart'];
   if (noNavbarPages.includes(pathName)) {
     return null;
   }
