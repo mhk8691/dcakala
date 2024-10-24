@@ -1,7 +1,6 @@
 import { Stack, Typography, useMediaQuery, useTheme } from "@mui/material";
 import LocalOfferIcon from "@mui/icons-material/LocalOffer";
 export default function SubNavbar() {
-  
   return (
     <Stack
       bgcolor={"#F3F3F3"}
@@ -13,11 +12,9 @@ export default function SubNavbar() {
       mt={0.5}
       justifyContent={"center"}
       borderColor={"#EAEAEA"}
-      sx={{ borderBottomRightRadius: "50%", borderBottomLeftRadius: "50%",}}
-      
+      sx={{ borderBottomRightRadius: "50%", borderBottomLeftRadius: "50%" }}
     >
       <Stack flexDirection={"row"} alignItems={"center"}>
-        <LocalOfferIcon fontSize="small" />
         <Typography
           variant="body1"
           color="initial"
@@ -25,9 +22,9 @@ export default function SubNavbar() {
         >
           مجله آموزشی
         </Typography>
+        <LocalOfferIcon fontSize="small" />
       </Stack>
       <Stack flexDirection={"row"} alignItems={"center"}>
-        <LocalOfferIcon fontSize="small" />
         <Typography
           variant="body1"
           color="initial"
@@ -35,9 +32,9 @@ export default function SubNavbar() {
         >
           تخفیف ها و پیشنهاد ها
         </Typography>
+          <LocalOfferIcon fontSize="small" />
       </Stack>
       <Stack flexDirection={"row"} alignItems={"center"}>
-        <LocalOfferIcon fontSize="small" />
         <Typography
           variant="body1"
           color="initial"
@@ -45,6 +42,7 @@ export default function SubNavbar() {
         >
           خرید اقساطی
         </Typography>
+        <LocalOfferIcon fontSize="small" />
       </Stack>
     </Stack>
   );
