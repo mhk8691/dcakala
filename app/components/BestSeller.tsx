@@ -1,14 +1,13 @@
 "use client";
-import React, { use, useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import RocketLaunchIcon from "@mui/icons-material/RocketLaunch";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper/modules";
 import useBreakPoint from "../hook/useBreakPoint";
-import { data } from "../services/ParkingDoorJack";
-import { Box, Stack, Typography } from "@mui/material";
+import Product from "../services/Product";
+import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
 const SwiperStyle: React.CSSProperties = {
   textAlign: "center",
   fontSize: "18px",
@@ -16,12 +15,15 @@ const SwiperStyle: React.CSSProperties = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  borderRadius: "8px",
   boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)",
 };
-export default function BestSeller() {
+interface Props {
+  title: string;
+  data: Product[];
+}
+export default function BestSeller({ title, data }: Props) {
   const [responsive, setResponsive] = useState<number | null>(null);
-  const [hasBtn, setHasBtn] = useState(true);
+  const space = useMediaQuery("(max-width:600px)");
   const {
     isExtraSmall,
     isMobileSmall,
@@ -34,25 +36,18 @@ export default function BestSeller() {
   useEffect(() => {
     if (isExtraSmall) {
       setResponsive(2.5);
-      setHasBtn(false);
     } else if (isMobileSmall) {
       setResponsive(2.5);
-      setHasBtn(true);
     } else if (isMobileLarge) {
       setResponsive(2.5);
-      setHasBtn(true);
     } else if (isTabletSmall) {
       setResponsive(2.5);
-      setHasBtn(true);
     } else if (isTabletLarge) {
       setResponsive(4.5);
-      setHasBtn(true);
     } else if (isDesktopSmall) {
       setResponsive(3.5);
-      setHasBtn(true);
     } else if (isDesktopLarge) {
       setResponsive(4);
-      setHasBtn(true);
     }
   }, [
     isExtraSmall,
@@ -63,6 +58,7 @@ export default function BestSeller() {
     isDesktopSmall,
     isDesktopLarge,
   ]);
+
   return (
     <Box
       sx={{
@@ -85,28 +81,32 @@ export default function BestSeller() {
           transform: "translateX(-50%)",
           width: "80%",
           py: 1,
+          pb: 2,
           textAlign: "center",
         }}
       >
         <Typography variant="h6" color="initial" sx={{ fontSize: "16px" }}>
-          پرفروش ترین آیفون های تصویری
+          {title}
         </Typography>
       </Box>
       <Swiper
         slidesPerView={responsive ? responsive : 3}
-        spaceBetween={20}
-        navigation={hasBtn}
+        spaceBetween={!space ? 20 : 2}
+        navigation={isExtraSmall ? false : true}
         modules={[Pagination, Navigation]}
         style={{
           width: "100%",
           height: "100%",
           padding: "0 1.5rem",
-          marginTop: "5rem",
+          marginTop: "3rem",
         }}
       >
         {data.map((item) => (
-          <SwiperSlide style={SwiperStyle} key={item.id}>
-            <Stack borderRadius={2} px={2} pb={3} pt={3} minHeight={"385px"}>
+          <SwiperSlide
+            style={{ ...SwiperStyle, ...{ borderRadius: space ? "0" : "8px" } }}
+            key={item.id}
+          >
+            <Stack px={2} pb={3} pt={3} minHeight={"385px"}>
               <Box
                 component={"img"}
                 src={item.imagePath}

@@ -1,20 +1,12 @@
-export interface Data {
-  id: number;
-  imagePath: string;
-  title: string;
-  price: string;
-  color?: string[];
-  discount?: string;
-  fastShipping?: boolean;
-  offer?: string;
-}
-export const data: Data[] = [
+import Product from './Product'
+export const data: Product[] = [
   {
     id: 1,
     imagePath: "https://B2n.ir/d13545",
     title: "آیفون تصویری سیماران 43TKM با حافظه 4.3 اینچی",
     price: "2,669,000 ",
     fastShipping: true,
+    video:'https://upload.vidbeen.ir/videos/video-door-phone/taba/taba-10-90m200-360.mp4'
   },
   {
     id: 2,
@@ -25,6 +17,7 @@ export const data: Data[] = [
     discount: "10",
     color: ["gray", "white"],
     price: "2,260,000",
+    video:'https://upload.vidbeen.ir/videos/video-door-phone/taba/taba-10-90m200-360.mp4'
   },
   {
     id: 3,
@@ -32,6 +25,7 @@ export const data: Data[] = [
     title: "آیفون تصویری کالیوز 4.3 اینچی مدل CU-B41",
     price: "1,815,000 ",
     fastShipping: false,
+    video:'https://upload.vidbeen.ir/videos/video-door-phone/taba/taba-10-90m200-360.mp4'
   },
   {
     id: 4,
@@ -40,6 +34,7 @@ export const data: Data[] = [
     price: "1,790,000 ",
     fastShipping: true,
     color: ["black", "white"],
+    video:'https://upload.vidbeen.ir/videos/video-door-phone/taba/taba-10-90m200-360.mp4'
   },
   {
     id: 5,
@@ -47,5 +42,6 @@ export const data: Data[] = [
     title: "آیفون تصویری سوزوکی ECO-730 بدون حافظه 7 اینچی",
     price: "2,750,000 ",
     fastShipping: false,
+    video:'https://upload.vidbeen.ir/videos/video-door-phone/taba/taba-10-90m200-360.mp4'
   },
 ];

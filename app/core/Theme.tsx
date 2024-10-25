@@ -4,6 +4,7 @@ declare module "@mui/material/styles" {
   interface BreakpointOverrides {
     xxs: true;
     xs: true;
+    sp:true;
     sm: true;
     md: true;
     lg: true;
@@ -30,6 +31,7 @@ const defaultTheme = createTheme({
     values: {
       xxs: 0,
       xs: 541,
+      sp:600,
       sm: 641,
       md: 769,
       lg: 990,

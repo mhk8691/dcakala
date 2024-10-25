@@ -1,13 +1,5 @@
-export interface Data {
-  id: number;
-  imagePath: string;
-  title: string;
-  price: string;
-  discount?: string;
-  fastShipping?: boolean;
-  offer?: string;
-}
-export const data: Data[] = [
+import Product from "./Product";
+export const data: Product[] = [
   {
     id: 1,
     imagePath:
@@ -21,8 +13,7 @@ export const data: Data[] = [
     id: 2,
     imagePath:
       "https://dashboard.dcakala.com/public/images/product/v2-calypso-400/2024/08/v2-automatic-gate-alypso-400-package_medium_2x.webp",
-    title:
-      "جک وی تو کالیپسو Calypso 400 قدرت هر لنگه 400 کیلوگرم    ",
+    title: "جک وی تو کالیپسو Calypso 400 قدرت هر لنگه 400 کیلوگرم    ",
     fastShipping: false,
     price: "23,000,000",
   },
