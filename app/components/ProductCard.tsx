@@ -28,18 +28,12 @@ export default function ProductCard({ item, style }: Props) {
       sx={{
         ...style,
         transition: ".2s ease",
-        "&:hover": { boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" },
+        "&:hover": {
+          xxs: "",
+          sm: { boxShadow: "0 0 10px rgba(0, 0, 0, 0.2)" },
+        },
       }}
     >
-      {/* <Box
-        component={"img"}
-        src={item.imagePath}
-        alt={item.title}
-        sx={{
-          width: "100%",
-          height: "100%",
-        }}
-      /> */}
       <HoverVideoBox
         videoPath={item.video}
         imagePath={item.imagePath}

@@ -16,7 +16,11 @@ function HoverVideoBox({ videoPath, imagePath, title, id }: Props) {
     setHover(null);
   };
   return (
-    <Box minHeight={'220px'}>
+    <Box
+      minHeight={"220px"}
+      onMouseEnter={() => onHover(id)}
+      onMouseLeave={onLeave}
+    >
       <Box
         component="img"
         src={imagePath}
@@ -27,7 +31,6 @@ function HoverVideoBox({ videoPath, imagePath, title, id }: Props) {
           objectFit: "cover",
           display: !hover ? "block" : "none",
         }}
-        onMouseEnter={() => onHover(id)}
       />
 
       {hover === id && (
@@ -39,11 +42,10 @@ function HoverVideoBox({ videoPath, imagePath, title, id }: Props) {
           loop
           sx={{
             width: "100%",
-            minHeight: "218px",
-            objectFit: "contain", 
+            minHeight: "210px",
+            objectFit: "contain",
             bgcolor: "black",
           }}
-          onMouseLeave={onLeave}
         />
       )}
     </Box>

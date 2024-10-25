@@ -6,7 +6,7 @@ import { Box, Divider, Grid2 as Grid } from "@mui/material";
 import ViewListIcon from "@mui/icons-material/ViewList";
 import ViewModuleIcon from "@mui/icons-material/ViewModule";
 import { useState } from "react";
-import Filter from "../components/Filter";
+import Sort from "./Sort";
 import Product from "../services/Product";
 import PaginationRounded from "./Pagination";
 interface Props {
@@ -28,7 +28,7 @@ export default function Products({ data }: Props) {
           alignItems: "center",
         }}
       >
-        <Filter />
+        <Sort />
 
         <Box
           border={1}
