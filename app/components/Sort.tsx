@@ -3,6 +3,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
+import ResponsiveFilter from "./ResponsiveFilter";
 
 export default function Sort() {
   const [filter, setFilter] = React.useState("10");
@@ -13,6 +14,7 @@ export default function Sort() {
 
   return (
     <div>
+      
       <FormControl
         variant="standard"
         sx={{ m: 1, minWidth: 120, direction: "rtl" }}
