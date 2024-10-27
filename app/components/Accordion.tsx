@@ -19,7 +19,7 @@ import {
 } from "@mui/material";
 import ActionFilterBtn from "./ActionFilterBtn";
 import FilterChip from "./FilterChip";
-import FilterTitle from "./FilterTitle";
+import FilterTitle from "./BoxTitle";
 const CustomAccordion = styled(Accordion)(({ theme }) => ({
   boxShadow: "none",
   fontSize: "14px",
@@ -32,6 +32,9 @@ interface Props {
   actionFilterBtnStyle?: SxProps;
   chipStyle?: SxProps;
 }
+const titleStyle: SxProps = {
+  bgcolor: "#A4A4A4",
+};
 export default function Filter({
   style,
   accordionSummaryStyle,
@@ -51,8 +54,10 @@ export default function Filter({
     );
   };
   return (
-    <Box position={"relative"}>
-      {hasFilterTitle ? <FilterTitle /> : null}
+    <Box>
+      {hasFilterTitle ? (
+        <FilterTitle style={titleStyle} title="فیلتر محصولات" />
+      ) : null}
       <Box sx={style}>
         {!style && (
           <Box display={"flex"} justifyContent={"left"} mx={1}>

@@ -9,13 +9,14 @@ import HoverVideoBox from "./HoverVideoBox";
 interface Props {
   item: Product;
   style?: SxProps;
+  hasHover: boolean;
 }
 const colorBoxStyle: SxProps = {
   width: "18px",
   height: "18px",
   border: "1px solid #E5E7EB",
 };
-export default function ProductCard({ item, style }: Props) {
+export default function ProductCard({ item, style, hasHover }: Props) {
   return (
     <Stack
       border={1}
@@ -34,12 +35,26 @@ export default function ProductCard({ item, style }: Props) {
         },
       }}
     >
-      <HoverVideoBox
-        videoPath={item.video}
-        imagePath={item.imagePath}
-        title={item.title}
-        id={item.id}
-      />
+      {hasHover ? (
+        <HoverVideoBox
+          videoPath={item.video}
+          imagePath={item.imagePath}
+          title={item.title}
+          id={item.id}
+        />
+      ) : (
+        <Box
+          component="img"
+          src={item.imagePath}
+          alt={item.title}
+          sx={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+          }}
+        />
+      )}
+
       <Box display={"flex"} gap={1} sx={{ minHeight: "20px" }}>
         {item.color?.map((item, index) => (
           <Box key={index} sx={colorBoxStyle} bgcolor={item}></Box>

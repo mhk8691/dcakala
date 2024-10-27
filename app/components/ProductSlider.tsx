@@ -98,7 +98,7 @@ export default function ProductSlider({ data, title }: Props) {
       >
         {data.map((item) => (
           <SwiperSlide className={styles.swiperSlide} key={item.id}>
-            <ProductCard item={item} key={item.id}/>
+            <ProductCard item={item} key={item.id} hasHover={false} />
           </SwiperSlide>
         ))}
       </Swiper>

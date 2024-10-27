@@ -29,9 +29,9 @@ input[type="number"]::-webkit-inner-spin-button {
 .swiper-pagination-bullet-active {
   background-color: #ff7900 !important;
 }
-.swiper-slide{
+.swiper-slide {
   user-select: none !important;
 }
-.swiper-button-disabled{
+.swiper-button-disabled {
   display: none !important;
 }

@@ -5,34 +5,51 @@ import BestSeller from "../components/BestSeller";
 import { data } from "../services/ParkingDoorJack";
 import { data as videoPhoneData } from "../services/videoPhone";
 import Filter from "../components/Accordion";
+import ProductsPopular from "../components/ProductsPopular";
 const accordionStyle: SxProps = {
   border: "1px solid #A4A4A4",
   borderTop: "none",
   borderRadius: 2,
   px: 1,
-  position: "absolute",
-  top: "85%",
   zIndex: 10,
   bgcolor: "white",
+  mt: "-.3rem",
 };
 export default function CategoryPage() {
   return (
     <Container maxWidth="xxxl" sx={{ direction: "rtl", mt: 5 }}>
-      <Grid container spacing={2}>
-        <Grid size={{ xxs: 0, xxl: 2.8 }}>
-          <Box sx={{ display: { xxs: "none", xxl: "block" } }}>
-            <Filter
-              style={accordionStyle}
-              accordionSummaryStyle={{ px: 0 }}
-              hasFilterTitle={true}
-              actionFilterBtnStyle={{
+      <Grid container spacing={2} sx={{ position: "relative", height: "100%" }}>
+        <Grid size={{ xxs: 0, xxl: 2.8 }} sx={{}}>
+          <Filter
+            style={accordionStyle}
+            accordionSummaryStyle={{ px: 0 }}
+            hasFilterTitle={true}
+            actionFilterBtnStyle={{
+              width: "100%",
+              mt: 1,
+              position: "sticky",
+              top: "5rem",
+              zIndex: 10,
+            }}
+          />
+          <Box
+            sx={{
+              width: "100%",
+              position: "static",
+              zIndex: 10,
+            }}
+          >
+            <Box
+              component={"img"}
+              src="https://dashboard.dcakala.com/public/images/side-banner/slider/2024/10/video-door-phone-ns_original.webp"
+              alt=""
+              sx={{
+                borderRadius: 2,
+                mt: 2,
                 width: "100%",
-                mt: 1,
-                position: "sticky",
-                top: "5rem",
-                zIndex: 10,
               }}
             />
+            <ProductsPopular />
           </Box>
         </Grid>
         <Grid size={{ sm: 12, xxl: 9.2 }}>

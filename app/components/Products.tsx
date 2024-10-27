@@ -42,7 +42,6 @@ export default function Products({ data }: Props) {
           borderColor={"#CECECE"}
           borderRadius={1}
           mr={2}
-        
         >
           <Box
             component={"div"}
@@ -86,6 +85,7 @@ export default function Products({ data }: Props) {
                   }}
                   item={item}
                   key={item.id}
+                  hasHover={true}
                 />
               ) : (
                 <ProductCardHorizontal item={item} />
