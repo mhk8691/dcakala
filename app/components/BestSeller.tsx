@@ -123,8 +123,8 @@ export default function BestSeller({ title, data }: Props) {
                 sx={{
                   opacity: ".8",
                   textAlign: "right",
-                  mt: item.fastShipping ? 3 : 7.2,
-                  minHeight: "40px",
+                  mt: item.fastShipping ? 3 : 5,
+                  minHeight: "60px",
                 }}
               >
                 {item.title}
