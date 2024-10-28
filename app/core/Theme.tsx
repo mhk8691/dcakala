@@ -4,12 +4,13 @@ declare module "@mui/material/styles" {
   interface BreakpointOverrides {
     xxs: true;
     xs: true;
-    sp:true;
+    sp: true;
     sm: true;
     md: true;
     lg: true;
     xl: true;
     xxl: true;
+    xll:true
     xxxl: true;
   }
 }
@@ -31,12 +32,13 @@ const defaultTheme = createTheme({
     values: {
       xxs: 0,
       xs: 541,
-      sp:600,
+      sp: 600,
       sm: 641,
       md: 769,
       lg: 990,
       xl: 1024,
       xxl: 1200,
+      xll: 1280,
       xxxl: 1550,
     },
   },
