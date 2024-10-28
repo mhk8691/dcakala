@@ -6,6 +6,7 @@ import { data } from "../services/ParkingDoorJack";
 import { data as videoPhoneData } from "../services/videoPhone";
 import Filter from "../components/Accordion";
 import ProductsPopular from "../components/ProductsPopular";
+import SelectedBrands from "./SelectedBrands";
 const accordionStyle: SxProps = {
   border: "1px solid #A4A4A4",
   borderTop: "none",
@@ -19,7 +20,7 @@ export default function CategoryPage() {
   return (
     <Container maxWidth="xxxl" sx={{ direction: "rtl", mt: 5 }}>
       <Grid container spacing={2} sx={{ position: "relative", height: "100%" }}>
-        <Grid size={{ xxs: 0, xxl: 2.8 }} sx={{}}>
+        <Grid size={{ xxs: 0, xxl: 2.8 }} sx={{display:{xxs:'none',xxl:'block'}}}>
           <Filter
             style={accordionStyle}
             accordionSummaryStyle={{ px: 0 }}
@@ -56,7 +57,7 @@ export default function CategoryPage() {
           <Box>
             <BestSeller title="پرفروش ترین آیفون های تصویری" data={data} />
             <Types />
-            {/* <SelectedBrands /> */}
+            <SelectedBrands />
             <Products data={videoPhoneData} />
           </Box>
         </Grid>

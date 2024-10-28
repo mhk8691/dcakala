@@ -56,6 +56,10 @@ export default function Types() {
                 bgcolor: {
                   sm: "primary.dark",
                 },
+                alignItems: {
+                  xxs: "center",
+                  sm: "stretch",
+                },
               }}
               onMouseEnter={() => onHover(item.id)}
               onMouseLeave={() => setHover(null)}
@@ -70,7 +74,10 @@ export default function Types() {
                   },
                   top: "5%",
                   left: "50%",
-                  transform: "translateX(-50%)",
+                  transform: {
+                    xxs: "",
+                    sm: "translateX(-50%)",
+                  },
                   width: {
                     xxl: "150px",
                     xxs: "140px",

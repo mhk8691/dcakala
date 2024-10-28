@@ -35,7 +35,7 @@ export default function BestSeller({ title, data }: Props) {
   } = useBreakPoint();
   useEffect(() => {
     if (isExtraSmall) {
-      setResponsive(2.5);
+      setResponsive(2);
     } else if (isMobileSmall) {
       setResponsive(2.5);
     } else if (isMobileLarge) {

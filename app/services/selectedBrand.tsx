@@ -94,4 +94,22 @@ export const data: Data[] = [
     imagePath:
       "https://dashboard.dcakala.com/public/images/category/video-door-phone/2024/07/2024/09/ff-technology-ns_2x.webp",
   },
+  {
+    id: 7,
+    title: "اف اف",
+    imagePath:
+      "https://dashboard.dcakala.com/public/images/category/video-door-phone/2024/07/2024/09/ff-technology-ns_2x.webp",
+  },
+  {
+    id: 7,
+    title: "اف اف",
+    imagePath:
+      "https://dashboard.dcakala.com/public/images/category/video-door-phone/2024/07/2024/09/ff-technology-ns_2x.webp",
+  },
+  {
+    id: 7,
+    title: "اف اف",
+    imagePath:
+      "https://dashboard.dcakala.com/public/images/category/video-door-phone/2024/07/2024/09/ff-technology-ns_2x.webp",
+  },
 ];
