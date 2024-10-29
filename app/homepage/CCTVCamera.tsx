@@ -25,7 +25,6 @@ const boxStyle: SxProps = {
   py: 1,
   borderRadius: "10px",
   transition: "all .2s ease",
-  
 };
 const leftBoxStyle: SxProps = {
   "&:hover": {
@@ -38,7 +37,7 @@ const rightBoxStyle: SxProps = {
     transform: "scale(1.05)",
     transformOrigin: "bottom right",
   },
-}
+};
 export default function CCTVCamera() {
   return (
     <>
@@ -82,13 +81,13 @@ export default function CCTVCamera() {
         >
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ ...boxStyle, ...rightBoxStyle }}>
-              <img src={data[0].imagePath} alt="" />
+              <img src={data[0].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[0].title}
               </Typography>
             </Box>
             <Box sx={{ ...boxStyle, ...leftBoxStyle }}>
-              <img src={data[1].imagePath} alt="" />
+              <img src={data[1].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[1].title}
               </Typography>
@@ -96,13 +95,13 @@ export default function CCTVCamera() {
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
             <Box sx={{ ...boxStyle, ...rightBoxStyle }}>
-              <img src={data[2].imagePath} alt="" />
+              <img src={data[2].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[2].title}
               </Typography>
             </Box>
             <Box sx={{ ...boxStyle, ...leftBoxStyle }}>
-              <img src={data[3].imagePath} alt="" />
+              <img src={data[3].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[3].title}
               </Typography>

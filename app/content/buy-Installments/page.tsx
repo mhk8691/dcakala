@@ -6,7 +6,7 @@ import BuyButton from "./BuyButton";
 
 export default function BuyInstallmentsPage() {
   return (
-    <div>
+    <Box sx={{mb:25}}>
       <TitleContent style={{ color: "primary.dark", fontSize: "40px" }}>
         خرید اقساطی از دی سی ای کالا
       </TitleContent>
@@ -444,6 +444,6 @@ export default function BuyInstallmentsPage() {
           </Box>
         </BoxContent>
       </Grid>
-    </div>
+    </Box>
   );
 }
