@@ -44,4 +44,12 @@ export const data: Product[] = [
     fastShipping: false,
     video:'https://upload.vidbeen.ir/videos/video-door-phone/taba/taba-10-90m200-360.mp4'
   },
+  {
+    id: 6,
+    imagePath: "https://B2n.ir/q11141",
+    title: "آیفون تصویری سوزوکی ECO-730 بدون حافظه 7 اینچی",
+    price: "2,750,000 ",
+    fastShipping: false,
+    video:'https://upload.vidbeen.ir/videos/video-door-phone/taba/taba-10-90m200-360.mp4'
+  },
 ];

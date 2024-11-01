@@ -80,13 +80,33 @@ export default function CCTVCamera() {
           }}
         >
           <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box sx={{ ...boxStyle, ...rightBoxStyle }}>
+            <Box
+              sx={{
+                ...boxStyle,
+                ...{
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                    transformOrigin: "bottom right",
+                  },
+                },
+              }}
+            >
               <img src={data[0].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[0].title}
               </Typography>
             </Box>
-            <Box sx={{ ...boxStyle, ...leftBoxStyle }}>
+            <Box
+              sx={{
+                ...boxStyle,
+                ...{
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                    transformOrigin: "bottom left",
+                  },
+                },
+              }}
+            >
               <img src={data[1].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[1].title}
@@ -94,13 +114,33 @@ export default function CCTVCamera() {
             </Box>
           </Box>
           <Box sx={{ display: "flex", justifyContent: "center" }}>
-            <Box sx={{ ...boxStyle, ...rightBoxStyle }}>
+            <Box
+              sx={{
+                ...boxStyle,
+                ...{
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                    transformOrigin: "top right",
+                  },
+                },
+              }}
+            >
               <img src={data[2].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[2].title}
               </Typography>
             </Box>
-            <Box sx={{ ...boxStyle, ...leftBoxStyle }}>
+            <Box
+              sx={{
+                ...boxStyle,
+                ...{
+                  "&:hover": {
+                    transform: "scale(1.05)",
+                    transformOrigin: "top left",
+                  },
+                },
+              }}
+            >
               <img src={data[3].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[3].title}

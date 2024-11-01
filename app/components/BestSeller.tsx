@@ -8,6 +8,7 @@ import { Pagination, Navigation } from "swiper/modules";
 import useBreakPoint from "../hook/useBreakPoint";
 import Product from "../services/Product";
 import { Box, Stack, Typography, useMediaQuery } from "@mui/material";
+import SliderCard from "./SliderCard";
 const SwiperStyle: React.CSSProperties = {
   textAlign: "center",
   fontSize: "18px",
@@ -106,93 +107,7 @@ export default function BestSeller({ title, data }: Props) {
             style={{ ...SwiperStyle, ...{ borderRadius: space ? "0" : "8px" } }}
             key={item.id}
           >
-            <Stack px={2} pb={3} pt={3} minHeight={"385px"}>
-              <Box
-                component={"img"}
-                src={item.imagePath}
-                alt={item.title}
-                sx={{
-                  width: "100%",
-                  height: "100%",
-                }}
-              />
-
-              <Typography
-                variant="body2"
-                color="initial"
-                sx={{
-                  opacity: ".8",
-                  textAlign: "right",
-                  mt: item.fastShipping ? 3 : 5,
-                  minHeight: "60px",
-                }}
-              >
-                {item.title}
-              </Typography>
-              <Box
-                mt={3}
-                sx={{ direction: "ltr" }}
-                justifyContent={"space-between"}
-                display={"flex"}
-                gap={1}
-              >
-                <Box>
-                  {/* {item.offer && (
-                    <Typography
-                      variant="h6"
-                      color={item.offer ? "error.dark" : "initial"}
-                      sx={{
-                        fontSize: "15px",
-                        direction: "rtl",
-                      }}
-                    >
-                      {item.offer}{" "}
-                      <Box
-                        component={"span"}
-                        sx={{ fontSize: "12px", opacity: ".8" }}
-                      >
-                        تومان
-                      </Box>
-                    </Typography>
-                  )} */}
-                  <Typography
-                    variant="h6"
-                    color="initial"
-                    sx={{
-                      fontSize: "15px",
-                      textDecoration: item.offer ? "line-through" : "none",
-                      direction: "rtl",
-                    }}
-                  >
-                    {item.price}{" "}
-                    <Box
-                      component={"span"}
-                      sx={{ fontSize: "12px", opacity: ".8" }}
-                    >
-                      تومان
-                    </Box>
-                  </Typography>
-                </Box>
-                {/* {item.discount && (
-                  <Typography
-                    variant="body2"
-                    color="initial"
-                    sx={{
-                      height: "20px",
-                      bgcolor: "error.main",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      color: "white",
-                      borderRadius: "5px",
-                      px: 0.5,
-                      fontSize: "12px",
-                    }}
-                  >
-                    % {item.discount}
-                  </Typography>
-                )} */}
-              </Box>
-            </Stack>
+            <SliderCard item={item} />
           </SwiperSlide>
         ))}
       </Swiper>
