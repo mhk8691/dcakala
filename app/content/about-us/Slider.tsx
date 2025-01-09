@@ -30,7 +30,7 @@ export default function Slider() {
   return (
     <Box display={"flex"} mt={7} overflow={"scroll"} width={"100%"} px={2}>
       {data.map((item, index) => (
-        <Box border={1} borderColor={"#CCCCCC"} borderRadius={2} mx={1} px={1}>
+        <Box border={1} borderColor={"#CCCCCC"} borderRadius={2} mx={1} px={1} key={index}>
           <Box
             key={index}
             component={"img"}

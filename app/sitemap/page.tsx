@@ -24,7 +24,7 @@ export default function SitemapPage() {
             <Divider />
             <Box component={"ul"} mt={1}>
               {item.link.map((link, index2) => (
-                <Box>
+                <Box key={index2}>
                   <Typography
                     key={index2}
                     component={"li"}
@@ -34,7 +34,7 @@ export default function SitemapPage() {
                     <Link href={link.link}>{link.name}</Link>
                   </Typography>
                   {link.subLinks?.map((subLink, index3) => (
-                    <Box>
+                    <Box key={index3}>
                       <Typography
                         key={index3}
                         component={"li"}
@@ -44,7 +44,7 @@ export default function SitemapPage() {
                         <Link href={subLink.link}>{subLink.name}</Link>
                       </Typography>
                       {subLink.subSublink?.map((subSubLink, index4) => (
-                        <Box>
+                        <Box key={index4}>
                           <Typography
                             key={index4}
                             component={"li"}

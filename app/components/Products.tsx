@@ -74,7 +74,7 @@ export default function Products({ data }: Props) {
       <Grid container spacing={{ xxs: 0, sp: 2 }} sx={{ mt: 3 }}>
         {data.map((item) =>
           view ? (
-            <Grid size={{ xxl: 3, sm: 4, xxs: 12, xs: 6 }}>
+            <Grid size={{ xxl: 3, sm: 4, xxs: 12, xs: 6 }} key={item.id}>
               {!isExtraSmall ? (
                 <ProductCard
                   style={{
@@ -92,7 +92,7 @@ export default function Products({ data }: Props) {
               )}
             </Grid>
           ) : (
-            <Grid size={12}>
+            <Grid size={12} key={item.id}>
               <ProductCardHorizontal
                 item={item}
                 style={{

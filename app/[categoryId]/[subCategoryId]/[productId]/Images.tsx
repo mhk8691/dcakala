@@ -58,7 +58,7 @@ export default function Images({ images }: Props) {
         >
           {images.map((item, index) => (
             <SwiperSlide className={styles.swiperSlide} key={index}>
-              <img src={item} style={{ width: "355px", height: "355px" }} />
+              <Box component={'img'} src={item} sx={{ width: "355px", height: "355px" }} />
             </SwiperSlide>
           ))}
         </Swiper>

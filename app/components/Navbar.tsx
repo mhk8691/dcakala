@@ -99,7 +99,8 @@ export default function Navbar() {
       </Stack>
       <Stack flexDirection={"row"} alignItems={"center"}>
         <Link href={'/'}>
-          <img
+          <Box
+          component={'img'}
             src="https://dashboard.dcakala.com/public/images/setting/dcakala-logo-new-ns/2024/09/dcakala-logo-new-ns_original.png"
             alt="logo"
             style={{ width: "90px", height: "100%", marginRight: "50px" }}

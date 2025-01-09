@@ -37,8 +37,8 @@ export default function Types() {
           borderColor: "#DDDDDD",
         }}
       >
-        {data.map((item) => (
-          <Grid size={{ xxl: 3, sm: 4, xxs: 6 }} sx={{ position: "relative" }}>
+        {data.map((item,index) => (
+          <Grid size={{ xxl: 3, sm: 4, xxs: 6 }} sx={{ position: "relative" }} key={index}>
             <Box
               component={"div"}
               p={0.15}

@@ -66,7 +66,7 @@ export default function ImageSlider() {
         {data.map((item) => (
           <SwiperSlide className={styles.swiperSlide} key={item.id}>
             <Link href={item.link} style={{ height: "100%" }}>
-              <img src={item.imagePath} alt="" />
+              <Box component={"img"} src={item.imagePath} alt="image" />
             </Link>
           </SwiperSlide>
         ))}

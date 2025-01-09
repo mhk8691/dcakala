@@ -26,7 +26,7 @@ export default function Selected() {
         }}
       >
         {data.map((item) => (
-          <Grid size={12 / 7}>
+          <Grid size={12 / 7} key={item.id}>
             <Stack
               bgcolor={"white"}
               direction={"column"}

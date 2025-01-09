@@ -91,7 +91,7 @@ export default function CCTVCamera() {
                 },
               }}
             >
-              <img src={data[0].imagePath} alt="" style={{ width: "100%" }} />
+              <Box component={'img'} src={data[0].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[0].title}
               </Typography>
@@ -107,7 +107,7 @@ export default function CCTVCamera() {
                 },
               }}
             >
-              <img src={data[1].imagePath} alt="" style={{ width: "100%" }} />
+              <Box component={'img'} src={data[1].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[1].title}
               </Typography>
@@ -125,7 +125,7 @@ export default function CCTVCamera() {
                 },
               }}
             >
-              <img src={data[2].imagePath} alt="" style={{ width: "100%" }} />
+              <Box component={'img'} src={data[2].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[2].title}
               </Typography>
@@ -141,7 +141,7 @@ export default function CCTVCamera() {
                 },
               }}
             >
-              <img src={data[3].imagePath} alt="" style={{ width: "100%" }} />
+              <Box component={"img"} src={data[3].imagePath} alt="" style={{ width: "100%" }} />
               <Typography variant="body1" sx={titleStyle}>
                 {data[3].title}
               </Typography>

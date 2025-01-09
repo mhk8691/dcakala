@@ -7,6 +7,7 @@ import { data as videoPhoneData } from "../services/videoPhone";
 import Filter from "../components/Accordion";
 import ProductsPopular from "../components/ProductsPopular";
 import SelectedBrands from "./SelectedBrands";
+import MarkdownRenderer from "../components/MarkdownRenderer";
 const accordionStyle: SxProps = {
   border: "1px solid #A4A4A4",
   borderTop: "none",
@@ -20,7 +21,10 @@ export default function CategoryPage() {
   return (
     <Container maxWidth="xxxl" sx={{ direction: "rtl", mt: 5 }}>
       <Grid container spacing={2} sx={{ position: "relative", height: "100%" }}>
-        <Grid size={{ xxs: 0, xxl: 2.8 }} sx={{display:{xxs:'none',xxl:'block'}}}>
+        <Grid
+          size={{ xxs: 0, xxl: 2.8 }}
+          sx={{ display: { xxs: "none", xxl: "block" } }}
+        >
           <Filter
             style={accordionStyle}
             accordionSummaryStyle={{ px: 0 }}
@@ -59,6 +63,7 @@ export default function CategoryPage() {
             <Types />
             <SelectedBrands />
             <Products data={videoPhoneData} />
+            <MarkdownRenderer />
           </Box>
         </Grid>
       </Grid>

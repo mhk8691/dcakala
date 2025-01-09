@@ -22,7 +22,8 @@ export default function LoginPage() {
       >
         <Stack flexDirection={"row"} justifyContent={"center"}>
           <Link href={"/"} style={{ textAlign: "center" }}>
-            <img
+            <Box
+              component={"img"}
               src="https://www.dcakala.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo2.559baedb.jpg&w=256&q=75"
               alt=""
               style={{ width: "55%", height: "100%" }}

@@ -46,7 +46,7 @@ export default function Detail({ item }: Props) {
         >
           رنگ:{" "}
           {item.color.map((item2, index) => (
-            <Typography component={"span"} variant="body2" color="initial">
+            <Typography component={"span"} variant="body2" color="initial" key={index}>
               {item2.name}
               {index !== item.color.length - 1 && ", "}
             </Typography>
